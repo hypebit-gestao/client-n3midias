@@ -15,22 +15,20 @@ import Button from "../Button";
 const Contact = () => {
   return (
     <ContentPage id="services" centralized background="bg-black-secondary">
-      <div className="flex flex-row justify-between items-center p-12">
+      <div className="flex flex-col lg:flex-row justify-between items-center p-4 lg:p-12">
         <div>
-          <h1 className="text-5xl text-white mb-2">
+          <h1 className="text-3xl md:text-5xl text-white mb-2">
             Venha <span className="text-green-primary">decolar</span> seu
-            negócio
-          </h1>
-          <h1 className="text-5xl text-white">
-            e faça já seu <span className="text-green-primary">orçamento</span>
+            negócio e faça já seu{" "}
+            <span className="text-green-primary">orçamento</span>
           </h1>
         </div>
-        <div>
+        <div className="mt-5 lg:mt-0 w-full">
           <Button
             background={"bg-green-primary"}
             label={"Entre em Contato"}
             rounded={"rounded-lg md:rounded-xl"}
-            width={"w-[400px]"}
+            width={"w-full lg:w-[400px]"}
             fontSize={"text-lg md:text-xl"}
           />
         </div>
