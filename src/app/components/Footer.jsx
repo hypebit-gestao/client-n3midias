@@ -29,11 +29,6 @@ const Footer = () => {
                 <Image alt="" src="/logo.png" width={100} height={10} />
               </Link>
             </div>
-            <div className="hidden lg:block">
-              <h1 className={`text-green-primary text-6xl uppercase `}>
-                N3Midias
-              </h1>
-            </div>
           </div>
 
           <div className="mt-16 hidden lg:flex xl:flex ">
