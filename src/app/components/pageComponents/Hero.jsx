@@ -52,13 +52,15 @@ const Hero = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
             className="mt-12"
           >
-            <Button
-              background={"bg-green-primary"}
-              label={"Saiba mais"}
-              rounded={"rounded-lg md:rounded-xl"}
-              width={"w-full md:w-[40%]"}
-              fontSize={"text-lg md:text-xl"}
-            />
+            <LinkNext href="https://wa.me/5521997036854" target="_blank">
+              <Button
+                background={"bg-green-primary"}
+                label={"Saiba mais"}
+                rounded={"rounded-lg md:rounded-xl"}
+                width={"w-full md:w-[40%]"}
+                fontSize={"text-lg md:text-xl"}
+              />
+            </LinkNext>
           </motion.div>
         </div>
         <motion.div

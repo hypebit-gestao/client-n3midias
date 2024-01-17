@@ -81,18 +81,18 @@ const Footer = () => {
         </div>
 
         <div className="flex  items-end justify-start lg:justify-end xl:justify-end  mt-12  z-20 w-full lg:mr-64 xl:mr-64 mr-0 ">
-          <LinkNext href="https://instagram.com/hypebit_" target="_blank">
+          <LinkNext href="https://www.instagram.com/n3midias/" target="_blank">
             <div className="bg-green-primary rounded-full p-2 mr-5 cursor-pointer hover:bg-opacity-80 text-black-primary    transition-all duration-200">
               <RiInstagramFill className="text-3xl" />
             </div>
           </LinkNext>
-          <LinkNext href="https://wa.me/5537999314716" target="_blank">
+          <LinkNext href="https://wa.me/5521997036854" target="_blank">
             <div className="bg-green-primary rounded-full p-2 mr-5 cursor-pointer hover:bg-opacity-80 text-black-primary     transition-all duration-200">
               <RiWhatsappFill className="text-3xl" />
             </div>
           </LinkNext>
           <LinkNext
-            href="mailto:hypebitcontato@gmail.com.br?subject=aa&body="
+            href="mailto:n3midias@gmail.com.br?subject=aa&body="
             target="_blank"
           >
             <div className="bg-green-primary rounded-full p-2 cursor-pointer hover:bg-opacity-80 text-black-primary  transition-all duration-200">

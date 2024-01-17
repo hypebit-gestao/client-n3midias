@@ -7,8 +7,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import useMenu from "../utils/hooks/useMenu";
 import Button from "./Button";
 import Logo from "./Logo";
+import MenuMobile from "./MenuMobile";
+import Link from "next/link";
 
 const Header = () => {
+  const menu = useMenu();
+
+  const handleMenu = () => {
+    menu.onOpen();
+  };
   return (
     <header className="py-3 min-w-full flex items-center  absolute top-0">
       <Container>
@@ -36,17 +43,20 @@ const Header = () => {
             transition={{ duration: 0.1 }}
             className="hidden lg:flex"
           >
-            <Button
-              outline
-              label={"Entre em Contato"}
-              rounded={"rounded-xl"}
-              fontSize={"text-md"}
-              color={"text-green-primary"}
-            />
+            <Link href="https://wa.me/5521997036854" target="_blank">
+              <Button
+                outline
+                label={"Entre em Contato"}
+                rounded={"rounded-xl"}
+                fontSize={"text-md"}
+                color={"text-green-primary"}
+              />
+            </Link>
           </motion.div>
           <div className="flex md:hidden text-4xl text-green-primary cursor-pointer">
-            <GiHamburgerMenu onClick={() => {}} />
+            <GiHamburgerMenu onClick={handleMenu} />
           </div>
+          {menu.isOpen ? <MenuMobile /> : ""}
         </nav>
       </Container>
     </header>

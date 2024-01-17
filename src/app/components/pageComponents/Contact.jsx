@@ -11,11 +11,12 @@ import { SiDesignernews } from "react-icons/si";
 import { FaVideo } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Button from "../Button";
+import Link from "next/link";
 
 const Contact = () => {
   return (
     <ContentPage id="services" centralized background="bg-black-secondary">
-      <div className="flex flex-col lg:flex-row justify-between items-center p-4 lg:p-12">
+      <div className="flex flex-col lg:flex-row justify-between  items-center p-4 lg:p-12">
         <div>
           <h1 className="text-3xl md:text-5xl text-white mb-2">
             Venha <span className="text-green-primary">decolar</span> seu
@@ -23,14 +24,16 @@ const Contact = () => {
             <span className="text-green-primary">orçamento</span>
           </h1>
         </div>
-        <div className="mt-5 lg:mt-0 w-full">
-          <Button
-            background={"bg-green-primary"}
-            label={"Entre em Contato"}
-            rounded={"rounded-lg md:rounded-xl"}
-            width={"w-full lg:w-[400px]"}
-            fontSize={"text-lg md:text-xl"}
-          />
+        <div className="mt-5 lg:mt-0  w-full flex justify-center ">
+          <Link href="https://wa.me/5521997036854" target="_blank">
+            <Button
+              background={"bg-green-primary"}
+              label={"Entre em Contato"}
+              rounded={"rounded-lg md:rounded-xl"}
+              width={"w-full lg:w-[400px]"}
+              fontSize={"text-lg md:text-xl"}
+            />
+          </Link>
         </div>
       </div>
     </ContentPage>

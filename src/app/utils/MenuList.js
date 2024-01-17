@@ -19,8 +19,8 @@ export const listMenu = [
   },
   {
     id: 4,
-    title: "Perguntas Freq",
-    href: "faq",
+    title: "Contato",
+    href: "contact",
     animateDelay: 0.4,
   },
 ];
