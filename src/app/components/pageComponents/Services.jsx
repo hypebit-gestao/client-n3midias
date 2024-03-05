@@ -8,16 +8,16 @@ import Button from "../Button";
 const Services = () => {
   return (
     <ContentPage id="services" heightScreen background="bg-white-secondary">
-      <div className="flex flex-col my-0 lg:mt-6">
+      <div className="flex flex-col ">
         <div className="flex flex-row ">
-          <div className="border-l-8 border-green-dark h-44 hidden lg:block"></div>
-          <div className="lg:ml-12">
+          <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
+          <div className="xl:ml-12 w-full ">
             <h1
-              className={` text-2xl text-center lg:text-start text-black-light font-bold uppercase`}
+              className={` text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
             >
               Nossos serviços
             </h1>
-            <h1 className="text-4xl lg:text-6xl text-center lg:text-start mt-4 font-bold w-full lg:max-w-[80%] text-black-primary">
+            <h1 className="text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-black-primary">
               O que podemos oferecer a você
             </h1>
           </div>
@@ -27,7 +27,7 @@ const Services = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-8 lg:mt-20 flex flex-col md:grid md:grid-cols-3 justify-center gap-12 md:gap-20"
+          className="mt-8 xl:mt-20 flex flex-col xl:grid xl:grid-cols-3 justify-center gap-12 md:gap-20"
         >
           <div className="col-span-1 flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
             <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">

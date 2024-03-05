@@ -16,20 +16,20 @@ import { AiFillInstagram } from "react-icons/ai";
 const Hero = () => {
   return (
     <ContentPage id="hero" heightScreen centralized background="bg-white">
-      <div className="flex flex-row md:justify-center justify-start items-center mt-24 mb-0 md:mb-16 relative ">
-        <div className="flex flex-col w-full lg:w-1/2 relative">
+      <div className="flex flex-row justify-center xl:justify-start items-center mt-8 md:mt-24 xl:mt-8 mb-0 md:mb-16 relative ">
+        <div className="flex flex-col w-full xl:w-1/2 relative">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
           >
             <h1
-              className={`uppercase text-[60px] lg:text-[90px] leading-none text-green-dark font-bold text-center lg:text-start`}
+              className={`uppercase text-[60px] lg:text-[90px] leading-none text-green-dark font-bold text-center xl:text-start`}
             >
               Decole sua
             </h1>
             <h1
-              className={`uppercase text-green-dark text-[60px] lg:text-[90px] leading-none font-bold text-center lg:text-start`}
+              className={`uppercase text-green-dark text-[60px] lg:text-[90px] leading-none font-bold text-center xl:text-start`}
             >
               Empresa
             </h1>
@@ -40,7 +40,7 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
           >
-            <h2 className="text-green-light text-3xl mt-5 font-bold text-center  md:text-start">
+            <h2 className="text-green-light text-3xl mt-5 font-bold text-center  xl:text-start">
               <span className="text-green-dark">Transformando</span> sonhos em
               realidade digital
               <span className="text-green-dark"> desde 2023.</span>
@@ -55,9 +55,9 @@ const Hero = () => {
             <LinkNext href="https://wa.me/5521997036854" target="_blank">
               <Button
                 background={"bg-green-dark"}
-                label={"Saiba mais"}
+                label={"Trabalhe conosco"}
                 rounded={"rounded-lg md:rounded-xl"}
-                width={"w-full md:w-[50%] "}
+                width={"w-full xl:w-[50%] "}
                 fontSize={"text-lg md:text-xl"}
                 color={"text-white"}
               />
@@ -67,9 +67,9 @@ const Hero = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
-            className="mt-12 flex flex-row items-center justify-center md:justify-start w-full "
+            className="mt-12 flex flex-row items-center justify-center xl:justify-start w-full "
           >
-            <div className="md:absolute md:-left-6 md:mt-12 flex items-center  ">
+            <div className="xl:absolute xl:-left-6 xl:mt-12 flex items-center  ">
               <Image
                 className=""
                 src={"/element2_black.png"}
@@ -116,10 +116,10 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className=" h-full hidden z-0 sm:flex w-1/2 relative "
+          className=" h-full hidden xl:block z-0 xl:w-1/2 relative "
         >
           <Image
-            className="hidden lg:block object-cover "
+            className="object-cover h-[881px] w-[855px]"
             src={"/img_hero.png"}
             alt="Imagem ilustrativa"
             width={855}

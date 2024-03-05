@@ -64,16 +64,16 @@ const Portfolio = () => {
 
   return (
     <ContentPage id="portfolio" heightScreen background="bg-white-secondary">
-      <div className="flex flex-col my-0 lg:mt-6">
+      <div className="flex flex-col my-0 ">
         <div className="flex flex-row ">
-          <div className="border-l-8 border-green-dark h-44 hidden lg:block"></div>
-          <div className="lg:ml-12">
+          <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
+          <div className="xl:ml-12 w-full">
             <h1
-              className={` text-2xl text-center lg:text-start text-black-light font-bold uppercase`}
+              className={` text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
             >
               Portfólio
             </h1>
-            <h1 className="text-4xl lg:text-6xl text-center lg:text-start mt-4 font-bold w-full lg:max-w-[80%] text-black-primary">
+            <h1 className="text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-black-primary">
               Alguns de nossos trabalhos
             </h1>
           </div>
@@ -83,61 +83,69 @@ const Portfolio = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-8 lg:mt-20 flex flex-col lg:grid lg:grid-cols-3 grid-cols-1 justify-center items-center lg:items-start gap-12 md:gap-20 "
+          className="mt-8 xl:mt-12 flex flex-wrap gap-24 flex-row xl:grid lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 justify-center items-center xl:items-start  "
         >
           <div className="col-span-1 w-[400px]">
             <Slider {...settings}>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_1.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_2.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_3.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_4.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_5.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_6.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_7.jpg"
                   width={400}
                   height={400}
                 />
               </div>
-              <div>
+              <div className="rounded-lg">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/chaveiro/img_8.jpg"
                   width={400}
                   height={400}
@@ -150,7 +158,7 @@ const Portfolio = () => {
             <Slider {...settings}>
               <div className=" w-full h-[400px]">
                 <Image
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover rounded-lg"
                   src="/portfolio/descartaveis/img_1.png"
                   width={400}
                   height={400}
@@ -159,7 +167,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover rounded-lg"
                   src="/portfolio/descartaveis/img_2.png"
                   width={400}
                   height={400}
@@ -168,7 +176,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover rounded-lg"
                   src="/portfolio/descartaveis/img_3.png"
                   width={400}
                   height={400}
@@ -177,7 +185,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover rounded-lg"
                   src="/portfolio/descartaveis/img_4.png"
                   width={400}
                   height={400}
@@ -190,6 +198,7 @@ const Portfolio = () => {
             <Slider {...settings}>
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_1.png"
                   width={400}
                   height={400}
@@ -198,6 +207,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_2.png"
                   width={400}
                   height={400}
@@ -206,6 +216,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_3.png"
                   width={400}
                   height={400}
@@ -214,6 +225,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_4.jpg"
                   width={400}
                   height={400}
@@ -222,6 +234,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_5.png"
                   width={400}
                   height={400}
@@ -230,6 +243,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_6.png"
                   width={400}
                   height={400}
@@ -238,6 +252,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_7.png"
                   width={400}
                   height={400}
@@ -246,6 +261,7 @@ const Portfolio = () => {
 
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_8.png"
                   width={400}
                   height={400}
@@ -253,6 +269,7 @@ const Portfolio = () => {
               </div>
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_9.png"
                   width={400}
                   height={400}
@@ -260,6 +277,7 @@ const Portfolio = () => {
               </div>
               <div className=" w-full h-[400px]">
                 <Image
+                  className="rounded-lg"
                   src="/portfolio/salao/img_10.png"
                   width={400}
                   height={400}
