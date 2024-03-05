@@ -12,7 +12,10 @@ import Button from "../Button";
 import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-
+import localFont from "next/font/local";
+const titleFont = localFont({
+  src: "../../../../public/fonts/EastmanAlternateTrial-Regular.otf",
+});
 const Hero = () => {
   return (
     <ContentPage id="hero" heightScreen centralized background="bg-white">
@@ -24,12 +27,12 @@ const Hero = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
           >
             <h1
-              className={`uppercase text-[60px] lg:text-[90px] leading-none text-green-dark font-bold text-center xl:text-start`}
+              className={`${titleFont.className} uppercase text-[60px] lg:text-[90px] leading-none text-green-dark font-bold text-center xl:text-start`}
             >
               Decole sua
             </h1>
             <h1
-              className={`uppercase text-green-dark text-[60px] lg:text-[90px] leading-none font-bold text-center xl:text-start`}
+              className={`${titleFont.className} uppercase text-green-dark text-[60px] lg:text-[90px] leading-none font-bold text-center xl:text-start`}
             >
               Empresa
             </h1>

@@ -7,9 +7,13 @@ import Button from "../Button";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
-
+import localFont from "next/font/local";
+const titleFont = localFont({
+  src: "../../../../public/fonts/EastmanAlternateTrial-Regular.otf",
+});
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(1);
+
   const testimonials = [
     {
       id: 1,
@@ -51,11 +55,13 @@ const Testimonials = () => {
             <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
             <div className="xl:ml-12 w-full ">
               <h1
-                className={`text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
+                className={`${titleFont.className} text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
               >
                 Depoimentos
               </h1>
-              <h1 className="text-4xl xl:text-5xl 2xl:text-6xl text-center xl:text-start mt-4 font-bold w-full text-black-primary">
+              <h1
+                className={`${titleFont.className} text-4xl xl:text-5xl 2xl:text-6xl text-center xl:text-start mt-4 font-bold w-full text-black-primary`}
+              >
                 O que nossos clientes satisfeitos estão dizendo!
               </h1>
             </div>

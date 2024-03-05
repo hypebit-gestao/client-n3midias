@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import ServiceModal from "./components/modals/ServiceModal";
 import useServiceModal from "./utils/hooks/useServiceModal";
+import localFont from "next/font/local";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 

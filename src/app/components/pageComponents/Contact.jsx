@@ -1,24 +1,21 @@
 "use client";
 
-import { Girassol } from "next/font/google";
 import ContentPage from "../ContentPage";
-import Image from "next/image";
-import { MdDesignServices } from "react-icons/md";
-import { GrDocumentPerformance } from "react-icons/gr";
-import { FaInvision } from "react-icons/fa";
-import { MdOutlineDeveloperMode } from "react-icons/md";
-import { SiDesignernews } from "react-icons/si";
-import { FaVideo } from "react-icons/fa";
-import { motion } from "framer-motion";
 import Button from "../Button";
 import Link from "next/link";
+import localFont from "next/font/local";
 
+const titleFont = localFont({
+  src: "../../../../public/fonts/EastmanAlternateTrial-Regular.otf",
+});
 const Contact = () => {
   return (
     <ContentPage id="services" centralized background="bg-black-secondary">
       <div className="flex flex-col xl:flex-row lg:justify-between justify-center  items-center p-4 xl:p-12 ">
         <div>
-          <h1 className="text-3xl md:text-6xl text-white-secondary mb-2 xl:text-start text-center">
+          <h1
+            className={`${titleFont.className} text-3xl md:text-6xl text-white-secondary mb-2 xl:text-start text-center`}
+          >
             Quer <span className="text-yellow-primary">impulsionar</span> seu
             negócio no digital?
           </h1>
