@@ -12,9 +12,7 @@ import {
 } from "react-icons/md";
 import { useState } from "react";
 import localFont from "next/font/local";
-const titleFont = localFont({
-  src: "../../../../public/fonts/EastmanAlternateTrial-Regular.otf",
-});
+
 const Portfolio = () => {
   function SampleNextArrow(props) {
     const { onClick } = props;
@@ -64,12 +62,12 @@ const Portfolio = () => {
           <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
           <div className="xl:ml-12 w-full">
             <h1
-              className={`${titleFont.className} text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
+              className={` text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
             >
               Portfólio
             </h1>
             <h1
-              className={`${titleFont.className} text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-black-primary`}
+              className={` text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-black-primary`}
             >
               Alguns de nossos trabalhos
             </h1>

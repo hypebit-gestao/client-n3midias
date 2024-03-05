@@ -6,9 +6,7 @@ import { motion } from "framer-motion";
 import Button from "../Button";
 import useServiceModal from "../../utils/hooks/useServiceModal";
 import localFont from "next/font/local";
-const titleFont = localFont({
-  src: "../../../../public/fonts/EastmanAlternateTrial-Regular.otf",
-});
+
 const Services = () => {
   const serviceModal = useServiceModal();
   return (
@@ -18,12 +16,12 @@ const Services = () => {
           <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
           <div className="xl:ml-12 w-full ">
             <h1
-              className={`${titleFont.className} text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
+              className={` text-2xl text-center xl:text-start text-black-light font-bold uppercase`}
             >
               Nossos serviços
             </h1>
             <h1
-              className={`${titleFont.className} text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-black-primary`}
+              className={` text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-black-primary`}
             >
               O que podemos oferecer a você
             </h1>
@@ -41,9 +39,7 @@ const Services = () => {
               <h1 className="text-xl text-white">01</h1>
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
-              <h1
-                className={`${titleFont.className} font-bold text-2xl text-center`}
-              >
+              <h1 className={` font-bold text-2xl text-center`}>
                 Tráfego Pago
               </h1>
               <ul className="mt-5 w-fit ">
@@ -91,11 +87,7 @@ const Services = () => {
               <h1 className="text-xl text-white">02</h1>
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
-              <h1
-                className={`${titleFont.className} font-bold text-2xl text-center`}
-              >
-                Branding
-              </h1>
+              <h1 className={` font-bold text-2xl text-center`}>Branding</h1>
               <ul className="mt-5 w-fit">
                 <li className="mb-1">
                   <span className="mr-2 text-green-dark">●</span> Identidade
@@ -155,9 +147,7 @@ const Services = () => {
               <h1 className="text-xl text-white">03</h1>
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
-              <h1
-                className={`${titleFont.className} font-bold text-2xl text-center`}
-              >
+              <h1 className={` font-bold text-2xl text-center`}>
                 Social Media
               </h1>
               {/* <p className="font-semibold text-center text-black-light mt-3">

@@ -1,11 +1,13 @@
 import { FaWhatsapp } from "react-icons/fa6";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Contact from "./components/pageComponents/Contact";
+
 import Hero from "./components/pageComponents/Hero";
 import Portfolio from "./components/pageComponents/Portfolio";
 import Services from "./components/pageComponents/Services";
 import Testimonials from "./components/pageComponents/Testimonials";
+import Pitch from "./components/pageComponents/Pitch";
+import Contact from "./components/pageComponents/Contact";
 
 export default function Home() {
   return (
@@ -14,9 +16,10 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
-        <Contact />
+        <Pitch />
         <Portfolio />
         <Testimonials />
+        <Contact />
         <Footer />
         {/* <div className="hidden lg:block fixed bottom-12 right-12">
           <motion.div animate={{ scale: [1, 1.1, 1] }}>
