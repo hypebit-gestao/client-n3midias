@@ -17,7 +17,7 @@ const Header = () => {
     menu.onOpen();
   };
   return (
-    <header className="py-3 min-w-full flex items-center  absolute top-0">
+    <header className="py-3 min-w-full flex items-center  absolute top-0 z-50">
       <Container>
         <nav className="flex items-center justify-between w-full">
           <motion.div

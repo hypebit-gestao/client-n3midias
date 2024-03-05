@@ -4,8 +4,10 @@ import ContentPage from "../ContentPage";
 
 import { motion } from "framer-motion";
 import Button from "../Button";
+import useServiceModal from "../../utils/hooks/useServiceModal";
 
 const Services = () => {
+  const serviceModal = useServiceModal();
   return (
     <ContentPage id="services" heightScreen background="bg-white-secondary">
       <div className="flex flex-col ">
@@ -59,6 +61,12 @@ const Services = () => {
 
               <div className="mt-6 w-full flex justify-center">
                 <Button
+                  onClick={() => {
+                    useServiceModal.setState({
+                      text: `O gestor irá analisar e segmentar o público-alvo, escolher as melhores palavras-chave, desenvolver anúncios atraentes, monitorar o desempenho das campanhas e mais.`,
+                    });
+                    serviceModal.onOpen();
+                  }}
                   background={"bg-black-secondary group-hover:bg-green-dark"}
                   label={"Saiba mais"}
                   rounded={"rounded-lg md:rounded-xl"}
@@ -104,6 +112,14 @@ const Services = () => {
 
               <div className="mt-6 w-full flex justify-center">
                 <Button
+                  onClick={() => {
+                    useServiceModal.setState({
+                      text: `Branding é uma estratégia vital para construir e gerenciar a
+                    identidade de uma marca, criando uma imagem única e memorável no
+                    mercado e estabelecendo uma conexão emocional com o público.`,
+                    });
+                    serviceModal.onOpen();
+                  }}
                   background={"bg-black-secondary group-hover:bg-green-dark"}
                   label={"Saiba mais"}
                   rounded={"rounded-lg md:rounded-xl"}
@@ -152,6 +168,13 @@ const Services = () => {
               </ul>
               <div className="mt-6 w-full flex justify-center">
                 <Button
+                  onClick={() => {
+                    useServiceModal.setState({
+                      text: `Gerenciamento e posicionamento nas redes sociais com estratégia e objetivos. Criação de conteúdos
+                      envolventes que ressoa com o público alvo e gera conversões através de estratégias de marketing no Instagram.`,
+                    });
+                    serviceModal.onOpen();
+                  }}
                   background={"bg-black-secondary group-hover:bg-green-dark"}
                   label={"Saiba mais"}
                   rounded={"rounded-lg md:rounded-xl"}

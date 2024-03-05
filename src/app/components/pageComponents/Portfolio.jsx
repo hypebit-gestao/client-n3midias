@@ -1,16 +1,8 @@
 "use client";
 
-import { Girassol } from "next/font/google";
 import ContentPage from "../ContentPage";
 import Image from "next/image";
-import { MdDesignServices } from "react-icons/md";
-import { GrDocumentPerformance } from "react-icons/gr";
-import { FaInvision } from "react-icons/fa";
-import { MdOutlineDeveloperMode } from "react-icons/md";
-import { SiDesignernews } from "react-icons/si";
-import { FaVideo } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Button from "../Button";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -64,7 +56,7 @@ const Portfolio = () => {
 
   return (
     <ContentPage id="portfolio" heightScreen background="bg-white-secondary">
-      <div className="flex flex-col my-0 ">
+      <div className="flex flex-col my-0 pb-12">
         <div className="flex flex-row ">
           <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
           <div className="xl:ml-12 w-full">

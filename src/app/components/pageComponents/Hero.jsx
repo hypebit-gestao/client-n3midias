@@ -16,7 +16,7 @@ import { AiFillInstagram } from "react-icons/ai";
 const Hero = () => {
   return (
     <ContentPage id="hero" heightScreen centralized background="bg-white">
-      <div className="flex flex-row justify-center xl:justify-start items-center mt-8 md:mt-24 xl:mt-8 mb-0 md:mb-16 relative ">
+      <div className="flex flex-row justify-center xl:justify-start items-center">
         <div className="flex flex-col w-full xl:w-1/2 relative">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
@@ -69,9 +69,9 @@ const Hero = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
             className="mt-12 flex flex-row items-center justify-center xl:justify-start w-full "
           >
-            <div className="xl:absolute xl:-left-6 xl:mt-12 flex items-center  ">
+            <div className="xl:absolute xl:-left-6 xl:mt-12 flex items-center  z-0">
               <Image
-                className=""
+                className="z-0"
                 src={"/element2_black.png"}
                 alt="Elemento"
                 width={80}

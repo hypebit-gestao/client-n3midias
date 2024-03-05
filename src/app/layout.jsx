@@ -1,17 +1,24 @@
+"use client";
+
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import ServiceModal from "./components/modals/ServiceModal";
+import useServiceModal from "./utils/hooks/useServiceModal";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
-export const metadata = {
-  title: "N3 MÍDIAS",
-  description: "Agência de Marketing Digital",
-};
-
 export default function RootLayout({ children }) {
+  const serviceModal = useServiceModal();
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <ServiceModal
+          isOpen={serviceModal.isOpen}
+          onClose={serviceModal.onClose}
+          text={serviceModal.text}
+        />
+        {children}
+      </body>
     </html>
   );
 }

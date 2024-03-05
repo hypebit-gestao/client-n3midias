@@ -7,9 +7,11 @@ const Button = ({
   rounded,
   width,
   outline,
+  onClick,
 }) => {
   return (
     <button
+      onClick={onClick}
       className={`${background} ${
         outline &&
         "border border-solid border-green-dark hover:bg-green-dark hover:text-white hover:font-bold"
