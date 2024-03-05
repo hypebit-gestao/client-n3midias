@@ -10,49 +10,264 @@ import { MdOutlineDeveloperMode } from "react-icons/md";
 import { SiDesignernews } from "react-icons/si";
 import { FaVideo } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Button from "../Button";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { useState } from "react";
 
 const Portfolio = () => {
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <button
+        onClick={onClick}
+        className={
+          "p-1 z-[100] rounded-full absolute right-3 top-1/2 transform -translate-y-1/2 bg-white"
+        }
+      >
+        <MdOutlineKeyboardArrowRight className="text-2xl text-black" />
+      </button>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <button
+        onClick={onClick}
+        className={
+          "p-1 z-[100] rounded-full absolute left-3 top-1/2 transform -translate-y-1/2 bg-white"
+        }
+      >
+        <MdOutlineKeyboardArrowLeft className="text-2xl text-black" />
+      </button>
+    );
+  }
+
+  const [sliderIndex, setSliderIndex] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    afterChange: (index) => setSliderIndex(index),
+  };
+
   return (
-    <ContentPage
-      id="portfolio"
-      heightScreen
-      centralized
-      background="bg-black-primary"
-    >
-      <div className="my-0 lg:mt-6">
-        <div>
-          <h1
-            className={`text-center text-6xl 3xl:text-[100px] text-green-primary font-bold`}
-          >
-            Portfólio
-          </h1>
-        </div>
-        <div className="flex flex-col  lg:flex-row mt-12">
-          <div className="relative border-8 border-solid border-white rounded-xl p-5 w-full h-[500px] lg:w-[500px]  bg-cover object-cover">
-            <Image
-              className="absolute bg-cover object-cover"
-              alt="image"
-              src={"/portfolio01.jpg"}
-              fill
-            />
-          </div>
-          <div className="relative ml-0 lg:ml-12 mt-8 lg:mt-24 border-8 border-solid border-white rounded-xl p-5w-full h-[500px] lg:w-[500px] bg-cover object-cover">
-            <Image
-              className="absolute bg-cover object-cover"
-              alt="image"
-              src={"/portfolio02.jpg"}
-              fill
-            />
-          </div>
-          <div className="relative ml-0 lg:ml-12 mt-8 lg:mt-48 border-8 border-solid border-white rounded-xl p-5 w-full h-[500px] lg:w-[500px]  bg-cover object-cover">
-            <Image
-              className="absolute bg-cover object-cover"
-              alt="image"
-              src={"/portfolio03.jpg"}
-              fill
-            />
+    <ContentPage id="portfolio" heightScreen background="bg-white-secondary">
+      <div className="flex flex-col my-0 lg:mt-6">
+        <div className="flex flex-row ">
+          <div className="border-l-8 border-green-dark h-44 hidden lg:block"></div>
+          <div className="lg:ml-12">
+            <h1
+              className={` text-2xl text-center lg:text-start text-black-light font-bold uppercase`}
+            >
+              Portfólio
+            </h1>
+            <h1 className="text-4xl lg:text-6xl text-center lg:text-start mt-4 font-bold w-full lg:max-w-[80%] text-black-primary">
+              Alguns de nossos trabalhos
+            </h1>
           </div>
         </div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 lg:mt-20 flex flex-col lg:grid lg:grid-cols-3 grid-cols-1 justify-center items-center lg:items-start gap-12 md:gap-20 "
+        >
+          <div className="col-span-1 w-[400px]">
+            <Slider {...settings}>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_1.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_2.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_3.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_4.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_5.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_6.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_7.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/portfolio/chaveiro/img_8.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </Slider>
+          </div>
+
+          <div className="col-span-1 w-[400px]">
+            <Slider {...settings}>
+              <div className=" w-full h-[400px]">
+                <Image
+                  className="w-full h-full object-cover "
+                  src="/portfolio/descartaveis/img_1.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  className="w-full h-full object-cover "
+                  src="/portfolio/descartaveis/img_2.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  className="w-full h-full object-cover "
+                  src="/portfolio/descartaveis/img_3.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  className="w-full h-full object-cover "
+                  src="/portfolio/descartaveis/img_4.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </Slider>
+          </div>
+
+          <div className="col-span-1 w-[400px]">
+            <Slider {...settings}>
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_1.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_2.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_3.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_4.jpg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_5.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_6.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_7.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_8.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_9.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className=" w-full h-[400px]">
+                <Image
+                  src="/portfolio/salao/img_10.png"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </Slider>
+          </div>
+        </motion.div>
       </div>
     </ContentPage>
   );

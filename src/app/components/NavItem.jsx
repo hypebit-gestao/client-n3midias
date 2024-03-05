@@ -10,7 +10,7 @@ const NavItem = ({ href, title, delay }) => {
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.1, delay: delay }}
-        className="px-5 text-xl text-white font-semibold cursor-pointer hover:text-green-primary transition-all duration-200"
+        className="px-5 text-xl text-green-dark font-semibold cursor-pointer hover:text-yellow-primary transition-all duration-200"
       >
         {title}
       </motion.li>

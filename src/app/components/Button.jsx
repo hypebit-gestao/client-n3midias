@@ -12,7 +12,7 @@ const Button = ({
     <button
       className={`${background} ${
         outline &&
-        "border border-solid border-green-primary hover:bg-green-primary hover:text-white"
+        "border border-solid border-green-dark hover:bg-green-dark hover:text-white hover:font-bold"
       } ${color} ${fontSize} ${rounded} ${width} cursor-pointer hover:bg-opacity-80 transition-all duration-200 font-bold p-3`}
     >
       {label}

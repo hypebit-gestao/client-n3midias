@@ -1,139 +1,172 @@
 "use client";
 
-import { Girassol } from "next/font/google";
 import ContentPage from "../ContentPage";
-import Image from "next/image";
-import { MdDesignServices } from "react-icons/md";
-import { GrDocumentPerformance } from "react-icons/gr";
-import { FaInvision } from "react-icons/fa";
-import { MdOutlineDeveloperMode } from "react-icons/md";
-import { SiDesignernews } from "react-icons/si";
-import { FaVideo } from "react-icons/fa";
+
 import { motion } from "framer-motion";
+import Button from "../Button";
 
 const Services = () => {
   return (
-    <ContentPage
-      id="services"
-      heightScreen
-      centralized
-      background="bg-black-primary"
-    >
-      <div className="flex flex-col items-center my-0 lg:mt-6">
-        <div>
-          <h1
-            className={`text-center text-6xl 3xl:text-[100px] text-green-primary font-bold`}
-          >
-            Serviços
-          </h1>
+    <ContentPage id="services" heightScreen background="bg-white-secondary">
+      <div className="flex flex-col my-0 lg:mt-6">
+        <div className="flex flex-row ">
+          <div className="border-l-8 border-green-dark h-44 hidden lg:block"></div>
+          <div className="lg:ml-12">
+            <h1
+              className={` text-2xl text-center lg:text-start text-black-light font-bold uppercase`}
+            >
+              Nossos serviços
+            </h1>
+            <h1 className="text-4xl lg:text-6xl text-center lg:text-start mt-4 font-bold w-full lg:max-w-[80%] text-black-primary">
+              O que podemos oferecer a você
+            </h1>
+          </div>
         </div>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-20 flex flex-col md:grid md:grid-cols-3 justify-center gap-12 md:gap-20"
+          className="mt-8 lg:mt-20 flex flex-col md:grid md:grid-cols-3 justify-center gap-12 md:gap-20"
         >
-          <div className="col-span-1 flex flex-col items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-2 border-solid border-blue-secondary flex justify-center items-center">
-              <div className="bg-green-primary rounded-full w-[88px] h-[88px] flex items-center justify-center ">
-                <MdDesignServices size={48} />
-              </div>
+          <div className="col-span-1 flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
+            <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
+              <h1 className="text-xl text-white">01</h1>
             </div>
-            <div className="my-4 w-[300px]">
-              <h1
-                className={`text-center text-3xl text-green-primary font-bold`}
-              >
-                Design Gráfico
-              </h1>
-              <h2 className="mt-2 text-center font-semibold text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h2>
+            <div className="flex flex-col items-center mt-4 w-[80%]">
+              <h1 className="font-bold text-2xl text-center">Tráfego Pago</h1>
+              <ul className="mt-5 w-fit ">
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Estratégia
+                  Publicitária
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Otimização de
+                  Campanhas
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Análise
+                  Métricas
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Segmentação da
+                  audiência
+                </li>
+                <li>
+                  <span className="mr-2 text-green-dark">●</span> Anúncios
+                </li>
+              </ul>
+
+              <div className="mt-6 w-full flex justify-center">
+                <Button
+                  background={"bg-black-secondary group-hover:bg-green-dark"}
+                  label={"Saiba mais"}
+                  rounded={"rounded-lg md:rounded-xl"}
+                  width={"w-[80%]"}
+                  fontSize={"text-lg md:text-xl"}
+                  color={"text-white"}
+                />
+              </div>
             </div>
           </div>
-          <div className="col-span-1 flex flex-col items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-2 border-solid border-blue-secondary flex justify-center items-center">
-              <div className="bg-green-primary rounded-full w-[88px] h-[88px] flex items-center justify-center ">
-                <GrDocumentPerformance size={48} />
-              </div>
+          <div className="col-span-1 flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
+            <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
+              <h1 className="text-xl text-white">02</h1>
             </div>
-            <div className="my-4 w-[300px]">
-              <h1
-                className={`text-center text-3xl text-green-primary font-bold`}
-              >
-                Performance
-              </h1>
-              <h2 className="mt-2 text-center font-semibold text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h2>
+            <div className="flex flex-col items-center mt-4 w-[80%]">
+              <h1 className="font-bold text-2xl text-center">Branding</h1>
+              <ul className="mt-5 w-fit">
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Identidade
+                  Visual
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Paleta de
+                  cores
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Cartão de
+                  visita
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Logotipo
+                </li>
+                <li>
+                  <span className="mr-2 text-green-dark">●</span> Identidade da
+                  marca
+                </li>
+              </ul>
+              {/* <p className="font-semibold text-center text-black-light mt-3">
+                Branding é uma estratégia vital para construir e gerenciar a
+                identidade de uma marca, criando uma imagem única e memorável no
+                mercado e estabelecendo uma conexão emocional com o público.
+              </p> */}
+
+              <div className="mt-6 w-full flex justify-center">
+                <Button
+                  background={"bg-black-secondary group-hover:bg-green-dark"}
+                  label={"Saiba mais"}
+                  rounded={"rounded-lg md:rounded-xl"}
+                  width={"w-[80%]"}
+                  fontSize={"text-lg md:text-xl"}
+                  color={"text-white"}
+                />
+              </div>
+              {/* <ul className="mt-5">
+                <li className="mb-1">● Estratégia Publicitária</li>
+                <li className="mb-1">● Otimização de Campanhas</li>
+                <li className="mb-1">● Análise Métricas</li>
+                <li className="mb-1">● Segmentação da audiência</li>
+                <li>● Anúncios</li>
+              </ul> */}
             </div>
           </div>
-          <div className="col-span-1 flex flex-col items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-2 border-solid border-blue-secondary flex justify-center items-center">
-              <div className="bg-green-primary rounded-full w-[88px] h-[88px] flex items-center justify-center ">
-                <FaInvision size={48} />
+          <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
+            <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
+              <h1 className="text-xl text-white">03</h1>
+            </div>
+            <div className="flex flex-col items-center mt-4 w-[80%]">
+              <h1 className="font-bold text-2xl text-center">Social Media</h1>
+              {/* <p className="font-semibold text-center text-black-light mt-3">
+                Gerenciamento e posicionamento nas redes sociais com estratégia
+                e objetivos. Criação de conteúdos envolventes que ressoa com o
+                público-alvo e gera conversões através de estratégias de
+                marketing no Instagram.
+              </p> */}
+              <ul className="mt-5 w-fit">
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Estratégia de
+                  conteúdos
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Gerenciamento
+                  de Redes Sociais
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Análise de
+                  Dados - Insights
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Design
+                </li>
+              </ul>
+              <div className="mt-6 w-full flex justify-center">
+                <Button
+                  background={"bg-black-secondary group-hover:bg-green-dark"}
+                  label={"Saiba mais"}
+                  rounded={"rounded-lg md:rounded-xl"}
+                  width={"w-[80%]"}
+                  fontSize={"text-lg md:text-xl"}
+                  color={"text-white"}
+                />
               </div>
-            </div>
-            <div className="my-4 w-[300px]">
-              <h1
-                className={`text-center text-3xl text-green-primary font-bold`}
-              >
-                Identidade Visual
-              </h1>
-              <h2 className="mt-2 text-center font-semibold text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h2>
-            </div>
-          </div>
-          <div className="col-span-1 flex flex-col items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-2 border-solid border-blue-secondary flex justify-center items-center">
-              <div className="bg-green-primary rounded-full w-[88px] h-[88px] flex items-center justify-center ">
-                <MdOutlineDeveloperMode size={48} />
-              </div>
-            </div>
-            <div className="my-4 w-[300px]">
-              <h1
-                className={`text-center text-3xl text-green-primary font-bold`}
-              >
-                Desenvolvimento
-              </h1>
-              <h2 className="mt-2 text-center font-semibold text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h2>
-            </div>
-          </div>
-          <div className="col-span-1 flex flex-col items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-2 border-solid border-blue-secondary flex justify-center items-center">
-              <div className="bg-green-primary rounded-full w-[88px] h-[88px] flex items-center justify-center ">
-                <SiDesignernews size={48} />
-              </div>
-            </div>
-            <div className="my-4 w-[300px]">
-              <h1
-                className={`text-center text-3xl text-green-primary font-bold`}
-              >
-                UI/UX Designer
-              </h1>
-              <h2 className="mt-2 text-center font-semibold text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h2>
-            </div>
-          </div>
-          <div className="col-span-1 flex flex-col items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-2 border-solid border-blue-secondary flex justify-center items-center">
-              <div className="bg-green-primary rounded-full w-[88px] h-[88px] flex items-center justify-center ">
-                <FaVideo size={48} />
-              </div>
-            </div>
-            <div className="my-4 w-[300px]">
-              <h1
-                className={`text-center text-3xl text-green-primary font-bold`}
-              >
-                Edição de Vídeo
-              </h1>
-              <h2 className="mt-2 text-center font-semibold text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h2>
+              {/* <ul className="mt-5">
+                <li className="mb-1">● Estratégia Publicitária</li>
+                <li className="mb-1">● Otimização de Campanhas</li>
+                <li className="mb-1">● Análise Métricas</li>
+                <li className="mb-1">● Segmentação da audiência</li>
+                <li>● Anúncios</li>
+              </ul> */}
             </div>
           </div>
         </motion.div>

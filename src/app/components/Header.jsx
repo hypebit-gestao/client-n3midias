@@ -49,7 +49,7 @@ const Header = () => {
                 label={"Entre em Contato"}
                 rounded={"rounded-xl"}
                 fontSize={"text-md"}
-                color={"text-green-primary"}
+                color={"text-green-dark"}
               />
             </Link>
           </motion.div>
