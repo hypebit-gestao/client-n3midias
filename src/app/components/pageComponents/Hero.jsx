@@ -120,8 +120,8 @@ const Hero = () => {
         >
           <Image
             className="hidden lg:block object-cover "
-            src={"/img_hero.jpg"}
-            alt="Imagem de uma foguete"
+            src={"/img_hero.png"}
+            alt="Imagem ilustrativa"
             width={855}
             height={881}
           />
