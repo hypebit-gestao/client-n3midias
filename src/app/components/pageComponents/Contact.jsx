@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <ContentPage id="contact" background="bg-black-secondary">
       <div className="flex flex-col my-0 pb-12">
-        <div className="flex flex-row ">
+        <div className="flex flex-row">
           <div className="border-l-8 border-yellow-primary h-44 hidden xl:block"></div>
           <div className="xl:ml-12 w-full">
             <h1
@@ -43,7 +43,7 @@ const Contact = () => {
               Contato
             </h1>
             <h1
-              className={` text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full xl:max-w-[80%] text-white-secondary`}
+              className={` text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full max-w-full xl:max-w-[80%] text-white-secondary`}
             >
               Envie-nos uma{" "}
               <span className="text-yellow-primary">mensagem</span>
@@ -51,7 +51,10 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <form className="mt-8 w-[60%] " onSubmit={handleSubmit(onSubmit)}>
+          <form
+            className="mt-8 w-full xl:w-[60%] "
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <div className="flex flex-row w-full">
               <div className="mr-3 w-full">
                 <input
