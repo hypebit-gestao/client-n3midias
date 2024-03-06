@@ -15,7 +15,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      avatar: "testimonial-img-1.jpg",
+      avatar: "testimonial-img-1.png",
       name: "Adriana Carvalho",
       description: "CEO - Company",
       text: "Que experiência incrível estou tendo com a agência cuidando das minhas redes! O tráfego, o trabalho do social media, é muito bom ter a agência cuidado das minhas redes sociais, deixando minhas páginas muito mais interessantes, me deixa livre pra cuidar do que eu gosto e sei fazer.",
@@ -74,7 +74,7 @@ const Testimonials = () => {
                   }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="mt-6 xl:mt-12 flex flex-col justify-center gap-12 md:gap-20 w-full xl:w-[70%]"
+                  className="mt-6 xl:mt-8 flex flex-col justify-center gap-12 md:gap-20 w-full xl:w-[70%]"
                 >
                   <div className="">
                     <p className="font-light text-lg">
