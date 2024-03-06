@@ -17,14 +17,14 @@ const Testimonials = () => {
       id: 1,
       avatar: "testimonial-img-1.png",
       name: "Adriana Carvalho",
-      description: "CEO - Company",
+      description: "Adriana Carvalho Studio",
       text: "Que experiência incrível estou tendo com a agência cuidando das minhas redes! O tráfego, o trabalho do social media, é muito bom ter a agência cuidado das minhas redes sociais, deixando minhas páginas muito mais interessantes, me deixa livre pra cuidar do que eu gosto e sei fazer.",
     },
     {
       id: 2,
       avatar: "testimonial-img-2.jpg",
       name: "Leonardo Vidile",
-      description: "CEO - Company",
+      description: "Art chaves",
       text: "⁠A vida da minha empresa mudou depois que contratei a N3 Mídias para gerenciar o tráfego e o social mídia para minhas redes sociais. Além de ter ganhado mais tempo para administrar e gerenciar todo resto da empresa.",
     },
   ];

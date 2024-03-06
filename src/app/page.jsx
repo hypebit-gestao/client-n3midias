@@ -21,7 +21,7 @@ export default function Home() {
         <Portfolio />
         <Testimonials />
         <Contact />
-        <Faq />
+        {/* <Faq /> */}
         <Footer />
         {/* <div className="hidden lg:block fixed bottom-12 right-12">
           <motion.div animate={{ scale: [1, 1.1, 1] }}>
