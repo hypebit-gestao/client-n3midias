@@ -8,6 +8,7 @@ import Services from "./components/pageComponents/Services";
 import Testimonials from "./components/pageComponents/Testimonials";
 import Pitch from "./components/pageComponents/Pitch";
 import Contact from "./components/pageComponents/Contact";
+import Faq from "./components/pageComponents/Faq";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Portfolio />
         <Testimonials />
         <Contact />
+        <Faq />
         <Footer />
         {/* <div className="hidden lg:block fixed bottom-12 right-12">
           <motion.div animate={{ scale: [1, 1.1, 1] }}>

@@ -15,17 +15,17 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      avatar: "avatar-testimonial.png",
-      name: "Kevin Andrew",
+      avatar: "testimonial-img-1.jpg",
+      name: "Adriana Carvalho",
       description: "CEO - Company",
-      text: "Sed ruia non numquam eius modi tempora incidunt ut labore uam dolore magnam aliruam quaerat voluptatem autenim ad mini quae veniam nostrum exercita ionem ullam molestiae non recusanrarav Itaque earum rerum auic.",
+      text: "Que experiência incrível estou tendo com a agência cuidando das minhas redes! O tráfego, o trabalho do social media, é muito bom ter a agência cuidado das minhas redes sociais, deixando minhas páginas muito mais interessantes, me deixa livre pra cuidar do que eu gosto e sei fazer.",
     },
     {
       id: 2,
-      avatar: "avatar-testimonial.png",
-      name: "Adsa Andrew",
+      avatar: "testimonial-img-2.jpg",
+      name: "Leonardo Vidile",
       description: "CEO - Company",
-      text: "Sed ruia non numquam eius modi tempora incidunt ut labore uam dolore magnam aliruam quaerat voluptatem autenim ad mini quae veniam nostrum exercita ionem ullam molestiae non recusanrarav Itaque earum rerum auic.",
+      text: "⁠A vida da minha empresa mudou depois que contratei a N3 Mídias para gerenciar o tráfego e o social mídia para minhas redes sociais. Além de ter ganhado mais tempo para administrar e gerenciar todo resto da empresa.",
     },
   ];
 
@@ -77,17 +77,18 @@ const Testimonials = () => {
                   className="mt-6 xl:mt-12 flex flex-col justify-center gap-12 md:gap-20 w-full xl:w-[70%]"
                 >
                   <div className="">
-                    <p className="font-light">
-                      <span className="text-green-dark text-2xl">"</span>{" "}
-                      {item.text}{" "}
-                      <span className="text-green-dark text-2xl">"</span>
+                    <p className="font-light text-lg">
+                      <span className="text-3xl">"</span>
+                      {item.text}
+                      <span className="text-3xl">"</span>
                     </p>
                     <div className="flex flex-col xl:flex-row items-center mt-6">
-                      <div className="flex justify-center items-center rounded-full bg-black-secondary w-20 h-20 group-hover:bg-green-dark transition-all duration-300">
+                      <div className="flex justify-center items-center  w-20 h-20 rounded-full group-hover:bg-green-dark transition-all duration-300">
                         <Image
-                          className="rounded-full"
+                          className="bg-cover rounded-full h-20 w-20"
                           alt="avatar"
-                          src={`/${item.avatar}`}
+                          src={`/testimonials/${item.avatar}`}
+                          objectFit="cover"
                           width={80}
                           height={80}
                         />
@@ -96,7 +97,7 @@ const Testimonials = () => {
                         <h1 className="font-bold text-3xl text-green-dark">
                           {item.name}
                         </h1>
-                        <h2 className="text-black-secondar mt-1">
+                        <h2 className="text-black-secondary mt-1">
                           {item.description}
                         </h2>
                       </div>

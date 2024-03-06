@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <ContentPage id="contact" heightScreen background="bg-black-secondary">
+    <ContentPage id="contact" background="bg-black-secondary">
       <div className="flex flex-col my-0 pb-12">
         <div className="flex flex-row ">
           <div className="border-l-8 border-yellow-primary h-44 hidden xl:block"></div>

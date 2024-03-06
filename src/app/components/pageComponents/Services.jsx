@@ -10,8 +10,8 @@ import localFont from "next/font/local";
 const Services = () => {
   const serviceModal = useServiceModal();
   return (
-    <ContentPage id="services" heightScreen background="bg-white-secondary">
-      <div className="flex flex-col ">
+    <ContentPage id="services" background="bg-white-secondary">
+      <div className="flex flex-col pb-12 ">
         <div className="flex flex-row ">
           <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
           <div className="xl:ml-12 w-full ">

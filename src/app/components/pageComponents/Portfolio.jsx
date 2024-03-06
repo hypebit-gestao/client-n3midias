@@ -56,7 +56,7 @@ const Portfolio = () => {
   };
 
   return (
-    <ContentPage id="portfolio" heightScreen background="bg-white-secondary">
+    <ContentPage id="portfolio" background="bg-white-secondary">
       <div className="flex flex-col my-0 pb-12">
         <div className="flex flex-row ">
           <div className="border-l-8 border-green-dark h-44 hidden xl:block"></div>
