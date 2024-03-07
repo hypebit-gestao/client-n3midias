@@ -60,7 +60,7 @@ const Testimonials = () => {
               <h1
                 className={` text-4xl xl:text-5xl 2xl:text-6xl text-center xl:text-start mt-4 font-bold w-full text-black-primary`}
               >
-                O que nossos clientes satisfeitos estão dizendo!
+                O que nossos clientes estão dizendo!
               </h1>
             </div>
           </div>

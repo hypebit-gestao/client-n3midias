@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-16 hidden lg:flex xl:flex ">
-            <h1 className="text-white-secondary font-semibold text-2xl">
+            <h1 className="text-green-dark font-semibold text-2xl">
               Todos os direitos reservados
             </h1>
           </div>
