@@ -5,7 +5,11 @@ import ContentPage from "../ContentPage";
 import { motion } from "framer-motion";
 import Button from "../Button";
 import useServiceModal from "../../utils/hooks/useServiceModal";
-import localFont from "next/font/local";
+import { AiFillNotification } from "react-icons/ai";
+import { MdDesignServices, MdSocialDistance } from "react-icons/md";
+import { FaCode } from "react-icons/fa";
+import { IoShareSocial } from "react-icons/io5";
+import { MdBrandingWatermark } from "react-icons/md";
 
 const Services = () => {
   const serviceModal = useServiceModal();
@@ -36,7 +40,7 @@ const Services = () => {
         >
           <div className="col-span-1 flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
             <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
-              <h1 className="text-xl text-white">01</h1>
+              <AiFillNotification className="text-4xl text-white" />
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
               <h1 className={` font-bold text-2xl text-center`}>
@@ -84,7 +88,7 @@ const Services = () => {
           </div>
           <div className="col-span-1 flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
             <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
-              <h1 className="text-xl text-white">02</h1>
+              <MdBrandingWatermark className="text-4xl text-white" />
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
               <h1 className={` font-bold text-2xl text-center`}>Branding</h1>
@@ -132,7 +136,7 @@ const Services = () => {
           </div>
           <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
             <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
-              <h1 className="text-xl text-white">03</h1>
+              <MdSocialDistance className="text-4xl text-white" />
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
               <h1 className={` font-bold text-2xl text-center`}>
@@ -177,7 +181,7 @@ const Services = () => {
           </div>
           <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
             <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
-              <h1 className="text-xl text-white">04</h1>
+              <FaCode className="text-4xl text-white" />
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
               <h1 className={` font-bold text-2xl text-center`}>
@@ -226,27 +230,23 @@ const Services = () => {
           </div>
           <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
             <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
-              <h1 className="text-xl text-white">05</h1>
+              <MdDesignServices className="text-4xl text-white" />
             </div>
             <div className="flex flex-col items-center mt-4 w-[80%]">
               <h1 className={` font-bold text-2xl text-center`}>Design</h1>
 
               <ul className="mt-5 w-fit">
                 <li className="mb-1">
-                  <span className="mr-2 text-green-dark">●</span> Identidade
-                  Visual da Marca
+                  <span className="mr-2 text-green-dark">●</span> Interatividade
+                  com o Público
                 </li>
                 <li className="mb-1">
-                  <span className="mr-2 text-green-dark">●</span> Engajamento e
+                  <span className="mr-2 text-green-dark">●</span> Engajamento do
                   Público
                 </li>
                 <li className="mb-1">
-                  <span className="mr-2 text-green-dark">●</span> Análise e
-                  Otimização
-                </li>
-                <li className="mb-1">
-                  <span className="mr-2 text-green-dark">●</span> Criação de
-                  Conteúdo Visual
+                  <span className="mr-2 text-green-dark">●</span>{" "}
+                  Desenvolvimento de Conteúdo Gráfico
                 </li>
                 <li className="mb-1">
                   <span className="mr-2 text-green-dark">●</span> Comunicação
@@ -257,7 +257,7 @@ const Services = () => {
                 <Button
                   onClick={() => {
                     useServiceModal.setState({
-                      text: `O design nas redes sociais oferece cinco pilares fundamentais para uma empresa: identidade visual consistente, engajamento do público através de conteúdo criativo, comunicação de mensagens memoráveis por meio de conteúdo visual impactante, manutenção da consistência da marca e criação de campanhas persuasivas que impulsionam o marketing e aumentam a conversão.`,
+                      text: `O design nas redes sociais oferece pilares fundamentais para uma empresa: engajamento do público através de conteúdo criativo, comunicação de mensagens memoráveis por meio de conteúdo visual impactante, e a manutenção da consistência da marca e criação de campanhas persuasivas que impulsionam o marketing e aumentam a conversão.`,
                     });
                     serviceModal.onOpen();
                   }}
@@ -272,6 +272,9 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
+        <div className="flex justify-center mt-12">
+          <h1 className="text-3xl font-bold">e muito mais...</h1>
+        </div>
       </div>
     </ContentPage>
   );
