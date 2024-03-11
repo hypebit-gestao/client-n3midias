@@ -6,6 +6,7 @@ import ServiceModal from "./components/modals/ServiceModal";
 import useServiceModal from "./utils/hooks/useServiceModal";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
