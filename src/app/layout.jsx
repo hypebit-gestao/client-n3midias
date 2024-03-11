@@ -5,6 +5,7 @@ import "./globals.css";
 import ServiceModal from "./components/modals/ServiceModal";
 import useServiceModal from "./utils/hooks/useServiceModal";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           text={serviceModal.text}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
