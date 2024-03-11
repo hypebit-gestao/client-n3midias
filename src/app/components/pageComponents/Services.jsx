@@ -10,6 +10,7 @@ import { MdDesignServices, MdSocialDistance } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
 import { MdBrandingWatermark } from "react-icons/md";
+import Link from "next/link";
 
 const Services = () => {
   const serviceModal = useServiceModal();
@@ -272,8 +273,17 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
-        <div className="flex justify-center mt-12">
-          <h1 className="text-3xl font-bold">e muito mais...</h1>
+        <div className="flex justify-center mt-24">
+          <Link href="https://wa.me/5521997036854" target="_blank">
+            <Button
+              color={"text-white"}
+              background={"bg-green-dark"}
+              label={"e muito mais..."}
+              rounded={"rounded-lg md:rounded-xl"}
+              width={"w-full lg:w-[400px]"}
+              fontSize={"text-lg md:text-xl"}
+            />
+          </Link>
         </div>
       </div>
     </ContentPage>
