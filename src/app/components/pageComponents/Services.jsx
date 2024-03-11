@@ -109,11 +109,6 @@ const Services = () => {
                   marca
                 </li>
               </ul>
-              {/* <p className="font-semibold text-center text-black-light mt-3">
-                Branding é uma estratégia vital para construir e gerenciar a
-                identidade de uma marca, criando uma imagem única e memorável no
-                mercado e estabelecendo uma conexão emocional com o público.
-              </p> */}
 
               <div className="mt-6 w-full flex justify-center">
                 <Button
@@ -133,13 +128,6 @@ const Services = () => {
                   color={"text-white"}
                 />
               </div>
-              {/* <ul className="mt-5">
-                <li className="mb-1">● Estratégia Publicitária</li>
-                <li className="mb-1">● Otimização de Campanhas</li>
-                <li className="mb-1">● Análise Métricas</li>
-                <li className="mb-1">● Segmentação da audiência</li>
-                <li>● Anúncios</li>
-              </ul> */}
             </div>
           </div>
           <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
@@ -150,12 +138,7 @@ const Services = () => {
               <h1 className={` font-bold text-2xl text-center`}>
                 Social Media
               </h1>
-              {/* <p className="font-semibold text-center text-black-light mt-3">
-                Gerenciamento e posicionamento nas redes sociais com estratégia
-                e objetivos. Criação de conteúdos envolventes que ressoa com o
-                público-alvo e gera conversões através de estratégias de
-                marketing no Instagram.
-              </p> */}
+
               <ul className="mt-5 w-fit">
                 <li className="mb-1">
                   <span className="mr-2 text-green-dark">●</span> Estratégia de
@@ -190,13 +173,102 @@ const Services = () => {
                   color={"text-white"}
                 />
               </div>
-              {/* <ul className="mt-5">
-                <li className="mb-1">● Estratégia Publicitária</li>
-                <li className="mb-1">● Otimização de Campanhas</li>
-                <li className="mb-1">● Análise Métricas</li>
-                <li className="mb-1">● Segmentação da audiência</li>
-                <li>● Anúncios</li>
-              </ul> */}
+            </div>
+          </div>
+          <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
+            <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
+              <h1 className="text-xl text-white">04</h1>
+            </div>
+            <div className="flex flex-col items-center mt-4 w-[80%]">
+              <h1 className={` font-bold text-2xl text-center`}>
+                Landing Page
+              </h1>
+
+              <ul className="mt-5 w-fit">
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Geração de
+                  Leads Qualificados
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Conversões de
+                  Vendas
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Análise e
+                  Otimização
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Fortalecimento
+                  da Marca
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Engajamento do
+                  Cliente
+                </li>
+              </ul>
+              <div className="mt-6 w-full flex justify-center">
+                <Button
+                  onClick={() => {
+                    useServiceModal.setState({
+                      text: `Uma landing page é vital para uma empresa, gerando leads qualificados, impulsionando conversões de vendas e promovendo o engajamento do cliente ao educá-los sobre os produtos ou serviços, fortalecendo relacionamentos.`,
+                    });
+                    serviceModal.onOpen();
+                  }}
+                  background={"bg-black-secondary group-hover:bg-green-dark"}
+                  label={"Saiba mais"}
+                  rounded={"rounded-lg md:rounded-xl"}
+                  width={"w-[80%]"}
+                  fontSize={"text-lg md:text-xl"}
+                  color={"text-white"}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-1  flex flex-col justify-center items-center bg-white p-6 group   hover:border-2  hover:border-black transition-colors duration-300 rounded-lg shadow-md ">
+            <div className="flex justify-center items-center rounded-full bg-black-secondary w-24 h-24 group-hover:bg-green-dark transition-all duration-300">
+              <h1 className="text-xl text-white">05</h1>
+            </div>
+            <div className="flex flex-col items-center mt-4 w-[80%]">
+              <h1 className={` font-bold text-2xl text-center`}>Design</h1>
+
+              <ul className="mt-5 w-fit">
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Identidade
+                  Visual da Marca
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Engajamento e
+                  Público
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Análise e
+                  Otimização
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Criação de
+                  Conteúdo Visual
+                </li>
+                <li className="mb-1">
+                  <span className="mr-2 text-green-dark">●</span> Comunicação
+                  Efetiva
+                </li>
+              </ul>
+              <div className="mt-6 w-full flex justify-center">
+                <Button
+                  onClick={() => {
+                    useServiceModal.setState({
+                      text: `O design nas redes sociais oferece cinco pilares fundamentais para uma empresa: identidade visual consistente, engajamento do público através de conteúdo criativo, comunicação de mensagens memoráveis por meio de conteúdo visual impactante, manutenção da consistência da marca e criação de campanhas persuasivas que impulsionam o marketing e aumentam a conversão.`,
+                    });
+                    serviceModal.onOpen();
+                  }}
+                  background={"bg-black-secondary group-hover:bg-green-dark"}
+                  label={"Saiba mais"}
+                  rounded={"rounded-lg md:rounded-xl"}
+                  width={"w-[80%]"}
+                  fontSize={"text-lg md:text-xl"}
+                  color={"text-white"}
+                />
+              </div>
             </div>
           </div>
         </motion.div>
