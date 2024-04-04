@@ -43,7 +43,7 @@ const Hero = () => {
             <h2 className="text-green-light text-3xl mt-5 font-bold text-center  xl:text-start">
               <span className="text-green-dark">Transformando</span> sonhos em
               realidade digital
-              <span className="text-green-dark"> desde 2023.</span>
+              {/* <span className="text-green-dark"> desde 2023.</span> */}
             </h2>
           </motion.div>
           <motion.div

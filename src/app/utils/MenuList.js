@@ -23,4 +23,10 @@ export const listMenu = [
     href: "testimonials",
     animateDelay: 0.4,
   },
+  {
+    id: 5,
+    title: "Consultoria",
+    href: "contact",
+    animateDelay: 0.5,
+  },
 ];

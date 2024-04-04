@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 const formSchema = yup.object({
   fullName: yup.string().required("Nome é obrigatório"),
@@ -20,6 +21,7 @@ const formSchema = yup.object({
 });
 
 const Contact = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -27,15 +29,27 @@ const Contact = () => {
   } = useForm({
     resolver: yupResolver(formSchema),
   });
-  const onSubmit = (data) => {
-    window.location.href = `mailto:n3midias@gmail.com?subject=${data.subject}&body=Ola, meu nome é ${data.fullName}. ${data.message} (${data.email})`;
+  const onSubmit = async (data) => {
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: data.fullName,
+        email: data.email,
+        subject: data.subject,
+        phone: data.phone,
+        message: data.message,
+      }),
+    }).then(() => router.push("/obrigado"));
   };
 
   return (
     <ContentPage id="contact" background="bg-black-secondary">
       <div className="flex flex-col my-0 pb-12">
         <div className="flex flex-row">
-          <div className="border-l-8 border-yellow-primary h-44 hidden xl:block"></div>
+          <div className="border-l-8 border-yellow-primary h-36 hidden xl:block"></div>
           <div className="xl:ml-12 w-full">
             <h1
               className={`text-2xl text-center xl:text-start text-white-secondary font-bold uppercase`}
@@ -43,10 +57,13 @@ const Contact = () => {
               Contato
             </h1>
             <h1
-              className={` text-4xl xl:text-6xl text-center xl:text-start mt-4 font-bold w-full max-w-full xl:max-w-[80%] text-white-secondary`}
+              className={` text-3xl xl:text-4xl text-center xl:text-start mt-4 font-bold w-full max-w-full xl:max-w-[80%] text-white-secondary`}
             >
               Envie-nos uma{" "}
-              <span className="text-yellow-primary">mensagem</span>
+              <span className="text-yellow-primary">mensagem</span> e concorra a
+              uma{" "}
+              <span className="text-yellow-primary">consultoria gratuita</span>{" "}
+              sobre gerenciador de anúncios!
             </h1>
           </div>
         </div>
