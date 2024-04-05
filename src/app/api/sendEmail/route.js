@@ -11,10 +11,13 @@ export async function POST(request) {
     const { fullName, email, subject, phone, message } = await request.json();
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.zoho.com",
+      port: 465,
+      secure: false, //ssl
       auth: {
         user: "comercial@n3midias.com.br",
-        pass: "gjkr ymov tlqn zjju",
+        pass: "6EbARfC6TLH2",
+        // pass: "svpe ttpq iokn psfs",
       },
     });
 
@@ -37,6 +40,7 @@ export async function POST(request) {
 
     return NextResponse.json({ message: "Email enviado" }, { status: 200 });
   } catch (error) {
+    console.log("Error: ", error);
     return NextResponse.json(
       { message: "Erro ao enviar email" },
       { status: 400 }

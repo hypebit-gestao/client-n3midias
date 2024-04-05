@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./Loader";
 const Button = ({
   label,
   background,
@@ -8,6 +9,7 @@ const Button = ({
   width,
   outline,
   onClick,
+  loading,
 }) => {
   return (
     <button
@@ -17,7 +19,13 @@ const Button = ({
         "border border-solid border-green-dark hover:bg-green-dark hover:text-white hover:font-bold"
       } ${color} ${fontSize} ${rounded} ${width} cursor-pointer hover:bg-opacity-80 transition-all duration-200 font-bold p-3`}
     >
-      {label}
+      {loading ? (
+        <div className="justify-center items-center">
+          <Loader size={8} color={"text-white"} />
+        </div>
+      ) : (
+        label
+      )}
     </button>
   );
 };

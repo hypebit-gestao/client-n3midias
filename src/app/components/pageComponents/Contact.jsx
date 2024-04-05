@@ -21,6 +21,7 @@ const formSchema = yup.object({
 });
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const {
     register,
@@ -30,19 +31,28 @@ const Contact = () => {
     resolver: yupResolver(formSchema),
   });
   const onSubmit = async (data) => {
-    const response = await fetch("/api/sendEmail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fullName: data.fullName,
-        email: data.email,
-        subject: data.subject,
-        phone: data.phone,
-        message: data.message,
-      }),
-    }).then(() => router.push("/obrigado"));
+    setLoading(true);
+    try {
+      await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName: data.fullName,
+          email: data.email,
+          subject: data.subject,
+          phone: data.phone,
+          message: data.message,
+        }),
+      }).then((res) => {
+        router.push("/obrigado");
+        setLoading(false);
+      });
+    } catch (error) {
+      setLoading(false);
+      console.log("Error: ", error);
+    }
   };
 
   return (
@@ -125,6 +135,7 @@ const Contact = () => {
               <Button
                 background={"bg-yellow-primary"}
                 label={"Enviar"}
+                loading={loading}
                 rounded={"rounded-lg md:rounded-xl"}
                 width={"w-full"}
                 fontSize={"text-lg md:text-xl"}
