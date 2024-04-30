@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
 
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCB3HZ55"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      height="0" width="0"></iframe></noscript>
 
         <ServiceModal
           isOpen={serviceModal.isOpen}
