@@ -17,7 +17,7 @@ const Thanks = () => {
     <ContentPage heightScreen background={"bg-white-secondary"}>
       <div className="flex justify-center w-full">
         <div className="flex flex-col items-center justify-center w-full">
-          <Image src="/logo.png" alt="Logo N3Midias" width={80} height={80} />
+          <Image src="/logo.png" alt="N3Midias" width={80} height={80} />
           <div className="w-[70%]">
             <h1 className="text-4xl font-bold text-green-dark text-center">
               Obrigado por se conectar com a N3 Mídias!

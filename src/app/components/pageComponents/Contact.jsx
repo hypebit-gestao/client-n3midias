@@ -33,18 +33,11 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+      await fetch('https://script.google.com/macros/s/AKfycbwXWpJAQ0Bd5cTcuxo9qMwWpFi8-8qNfqqbKaR_JuiYxt47a5qxck5ickRPhAhE4MzNEg/exec', {
+        method: 'POST',
         body: JSON.stringify({
-          fullName: data.fullName,
           email: data.email,
-          subject: data.subject,
-          phone: data.phone,
-          message: data.message,
-        }),
+        })
       }).then((res) => {
         router.push("/obrigado");
         setLoading(false);
