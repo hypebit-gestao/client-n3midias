@@ -12,10 +12,21 @@ import Script from "next/script";
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default function RootLayout({ children }) {
+
   const serviceModal = useServiceModal();
   return (
     <html lang="en" suppressHydrationWarning>
       <head>   
+        <title>N3MIDIAS</title>
+        <meta name="description" content="N3MIDIAS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        
       <Script>
           {`
          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,4 +76,8 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
+  
 }
+
+
+
