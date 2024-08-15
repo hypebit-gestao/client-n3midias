@@ -31,21 +31,7 @@ const Contact = () => {
     resolver: yupResolver(formSchema),
   });
   const onSubmit = async (data) => {
-    setLoading(true);
-    try {
-      await fetch('https://script.google.com/macros/s/AKfycbwXWpJAQ0Bd5cTcuxo9qMwWpFi8-8qNfqqbKaR_JuiYxt47a5qxck5ickRPhAhE4MzNEg/exec', {
-        method: 'POST',
-        body: JSON.stringify({
-          email: data.email,
-        })
-      }).then((res) => {
-        router.push("/obrigado");
-        setLoading(false);
-      });
-    } catch (error) {
-      setLoading(false);
-      console.log("Error: ", error);
-    }
+    router.push("/obrigado");
   };
 
   return (
