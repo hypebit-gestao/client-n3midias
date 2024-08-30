@@ -35,7 +35,7 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await axios.post("https://crm-lps-srv.onrender.com/lead/8472c2b9-7ee8-4424-bd8d-de24988cad73", {
+      await axios.post("https://crm-lps-srv.onrender.com/lead", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -44,7 +44,8 @@ const Contact = () => {
           email: data.email,
           cellphone: data.phone,
           description: data.message,
-          status: 1
+          status: 1,
+          user_id: "8472c2b9-7ee8-4424-bd8d-de24988cad73",
         }),
       }).then((res) => {
         router.push("/obrigado");
