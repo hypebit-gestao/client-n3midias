@@ -11,6 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 const formSchema = yup.object({
   fullName: yup.string().required("Nome é obrigatório"),
@@ -30,8 +31,29 @@ const Contact = () => {
   } = useForm({
     resolver: yupResolver(formSchema),
   });
+
   const onSubmit = async (data) => {
-    router.push("/obrigado");
+    setLoading(true);
+    try {
+      await axios.post("https://crm-lps-srv.onrender.com/lead/8472c2b9-7ee8-4424-bd8d-de24988cad73", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullname: data.fullName,
+          email: data.email,
+          cellphone: data.phone,
+          description: data.message,
+          status: 1
+        }),
+      }).then((res) => {
+        router.push("/obrigado");
+        setLoading(false);
+      });
+    } catch (error) {
+      setLoading(false);
+      console.log("Error: ", error);
+    }
   };
 
   return (
