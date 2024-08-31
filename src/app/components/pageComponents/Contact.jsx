@@ -35,22 +35,27 @@ const Contact = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await axios.post("https://crm-lps-srv.onrender.com/lead", {
-          fullname: data.fullName,
-          email: data.email,
-          cellphone: data.phone,
-          description: data.message,
-          status: 1,
-          user_id: "8472c2b9-7ee8-4424-bd8d-de24988cad73",
-      }, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-       
-      }).then((res) => {
-        router.push("/obrigado");
-        setLoading(false);
-      });
+      await axios
+        .post(
+          "https://crm-lps-srv.onrender.com/lead",
+          {
+            fullname: data.fullName,
+            email: data.email,
+            cellphone: data.phone,
+            description: data.message,
+            status: 1,
+            user_id: "3a1347d6-2b96-4dcf-86f7-6ee9f8a9734a",
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          router.push("/obrigado");
+          setLoading(false);
+        });
     } catch (error) {
       setLoading(false);
       console.log("Error: ", error);
