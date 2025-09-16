@@ -4,7 +4,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/n3clinicas',   
+        source: '/n3clinicas',     // URL que o usuário acessa
         destination: 'https://inlead.digital/n3clinica/', 
         permanent: true,       
       },
