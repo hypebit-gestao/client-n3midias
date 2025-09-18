@@ -8,6 +8,11 @@ const nextConfig = {
         destination: 'https://inlead.digital/n3clinica/', 
         permanent: true,       
       },
+         {
+        source: '/n3negociolocal',     // URL que o usuário acessa
+        destination: 'https://inlead.digital/n3negociolocal/', 
+        permanent: true,       
+      },
     ];
   },
 };
